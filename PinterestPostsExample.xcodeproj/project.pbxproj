@@ -95,11 +95,11 @@
 		11DC8E081EA410710036F77E /* PinterestPostsExample */ = {
 			isa = PBXGroup;
 			children = (
-				11DC8E091EA410710036F77E /* AppDelegate.swift */,
-				11DC8E0D1EA410710036F77E /* Main.storyboard */,
-				11DC8E101EA410710036F77E /* Assets.xcassets */,
-				11DC8E121EA410710036F77E /* LaunchScreen.storyboard */,
-				11DC8E151EA410710036F77E /* Info.plist */,
+				11DC8E371EA411F20036F77E /* ApiClient */,
+				11DC8E391EA412020036F77E /* Controllers */,
+				11DC8E381EA411FC0036F77E /* Models */,
+				11DC8E3A1EA412080036F77E /* Views */,
+				11DC8E3D1EA4124B0036F77E /* SupportingFiles */,
 			);
 			path = PinterestPostsExample;
 			sourceTree = "<group>";
@@ -120,6 +120,63 @@
 				11DC8E2B1EA410710036F77E /* Info.plist */,
 			);
 			path = PinterestPostsExampleUITests;
+			sourceTree = "<group>";
+		};
+		11DC8E371EA411F20036F77E /* ApiClient */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ApiClient;
+			sourceTree = "<group>";
+		};
+		11DC8E381EA411FC0036F77E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		11DC8E391EA412020036F77E /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		11DC8E3A1EA412080036F77E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				11DC8E3C1EA412360036F77E /* CustomViews */,
+				11DC8E3B1EA4122B0036F77E /* SBAndXib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		11DC8E3B1EA4122B0036F77E /* SBAndXib */ = {
+			isa = PBXGroup;
+			children = (
+				11DC8E0D1EA410710036F77E /* Main.storyboard */,
+				11DC8E121EA410710036F77E /* LaunchScreen.storyboard */,
+			);
+			path = SBAndXib;
+			sourceTree = "<group>";
+		};
+		11DC8E3C1EA412360036F77E /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = CustomViews;
+			path = CutomViews;
+			sourceTree = "<group>";
+		};
+		11DC8E3D1EA4124B0036F77E /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				11DC8E091EA410710036F77E /* AppDelegate.swift */,
+				11DC8E101EA410710036F77E /* Assets.xcassets */,
+				11DC8E151EA410710036F77E /* Info.plist */,
+			);
+			path = SupportingFiles;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
