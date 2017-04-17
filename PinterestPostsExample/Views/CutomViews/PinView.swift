@@ -94,7 +94,7 @@ class PinView: UIView {
     let piTopC = NSLayoutConstraint(item: pinImage, attribute: .top, relatedBy: .equal, toItem: self, attribute: .top, multiplier: 1.0, constant: 0)
     let piRightC = NSLayoutConstraint(item: pinImage, attribute: .right, relatedBy: .equal, toItem: self, attribute: .right, multiplier: 1.0, constant: 0)
     let piBottomC = NSLayoutConstraint(item: pinImage, attribute: .bottom, relatedBy: .equal, toItem: self, attribute: .bottom, multiplier: 1.0, constant: 0)
-    let piLeftC = NSLayoutConstraint(item: pinImage, attribute: .left, relatedBy: .equal, toItem: self, attribute: .left, multiplier: 1.01, constant: 0)
+    let piLeftC = NSLayoutConstraint(item: pinImage, attribute: .left, relatedBy: .equal, toItem: self, attribute: .left, multiplier: 1.0, constant: 0)
     //
     let pbRightC = NSLayoutConstraint(item: progressBar, attribute: .right, relatedBy: .equal, toItem: self, attribute: .right, multiplier: 1.0, constant: 0)
     let pbTopC = NSLayoutConstraint(item: progressBar, attribute: .top, relatedBy: .equal, toItem: self, attribute: .top, multiplier: 1.0, constant: 0)
@@ -127,16 +127,15 @@ class PinView: UIView {
       return
     }
     
+    setNeedsLayout()
+    
     cancelButton.isHidden = false
     progressBar.isHidden = false
     progressBar.progress = 0
     reloadButton.isHidden = true
     
-    // TODO: Remove this, and use thumbUrl
-    let testUrl = URL(string: "https://static.pexels.com/photos/2079/nature-forest-waterfall-jungle.jpg")!
-    
     downloadTask = Requester.sharedInstance.newTask(
-      url: testUrl,
+      url: thumbUrl,
       completionHandler: { (data, error) in
         guard error == nil, let data = data else { return }
         if let image = UIImage(data: data) {

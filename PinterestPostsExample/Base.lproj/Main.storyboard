@@ -37,17 +37,53 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Wvx-Dz-x4c" customClass="PinView" customModule="PinterestPostsExample" customModuleProvider="target">
-                                <rect key="frame" x="16" y="72" width="239" height="323"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="t3K-6F-5K5">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <collectionViewLayout key="collectionViewLayout" id="dDu-9Z-Y4l" customClass="PinterestLayout" customModule="PinterestPostsExample" customModuleProvider="target"/>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="pincell" id="if4-Ro-PqR" customClass="PinCollectionViewCell" customModule="PinterestPostsExample" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="167" height="173"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="167" height="173"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YMp-sk-Y85" customClass="PinView" customModule="PinterestPostsExample" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="0.0" width="167" height="173"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </view>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="YMp-sk-Y85" firstAttribute="top" secondItem="if4-Ro-PqR" secondAttribute="top" id="600-4N-JGY"/>
+                                            <constraint firstAttribute="bottom" secondItem="YMp-sk-Y85" secondAttribute="bottom" id="ETq-rF-mz5"/>
+                                            <constraint firstItem="YMp-sk-Y85" firstAttribute="leading" secondItem="if4-Ro-PqR" secondAttribute="leading" id="cKA-5N-uiN"/>
+                                            <constraint firstAttribute="trailing" secondItem="YMp-sk-Y85" secondAttribute="trailing" id="haR-4i-xVQ"/>
+                                        </constraints>
+                                        <size key="customSize" width="167" height="173"/>
+                                        <connections>
+                                            <outlet property="pinView" destination="YMp-sk-Y85" id="nbP-jC-KeY"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="n8f-X4-79F"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="zqd-Yp-KBz"/>
+                                </connections>
+                            </collectionView>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="t3K-6F-5K5" secondAttribute="trailing" id="VRA-ZQ-5eD"/>
+                            <constraint firstItem="t3K-6F-5K5" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="nUe-Sh-jfp"/>
+                            <constraint firstItem="t3K-6F-5K5" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="pBa-Wz-nJ1"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="t3K-6F-5K5" secondAttribute="bottom" id="rBS-cl-HC1"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="aDw-6b-jU3"/>
                     <connections>
-                        <outlet property="pinView" destination="Wvx-Dz-x4c" id="2ij-aU-McO"/>
+                        <outlet property="collectionView" destination="t3K-6F-5K5" id="Nan-89-b7Z"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
