@@ -7,6 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		110352161EA42F6C004317DB /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115D42CE1EA41A80003C290E /* Constants.swift */; };
+		110352171EA42F6D004317DB /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115D42CE1EA41A80003C290E /* Constants.swift */; };
+		110352181EA42F87004317DB /* Pin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115D42C71EA417D1003C290E /* Pin.swift */; };
+		110352191EA42F87004317DB /* Pin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115D42C71EA417D1003C290E /* Pin.swift */; };
+		1103521A1EA42F8A004317DB /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115D42CB1EA41926003C290E /* Category.swift */; };
+		1103521B1EA42F8B004317DB /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115D42CB1EA41926003C290E /* Category.swift */; };
+		1103521C1EA42F8D004317DB /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115D42C91EA4191E003C290E /* User.swift */; };
+		1103521D1EA42F8E004317DB /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115D42C91EA4191E003C290E /* User.swift */; };
+		114D2D311EA4BBA1005235E3 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114D2D301EA4BBA1005235E3 /* Extensions.swift */; };
+		114D2D321EA4BBA1005235E3 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114D2D301EA4BBA1005235E3 /* Extensions.swift */; };
+		114D2D331EA4BBA1005235E3 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114D2D301EA4BBA1005235E3 /* Extensions.swift */; };
+		114D2D351EA4C491005235E3 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114D2D341EA4C491005235E3 /* HomeViewController.swift */; };
+		114D2D361EA4C491005235E3 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114D2D341EA4C491005235E3 /* HomeViewController.swift */; };
+		114D2D371EA4C491005235E3 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114D2D341EA4C491005235E3 /* HomeViewController.swift */; };
+		115D42C81EA417D1003C290E /* Pin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115D42C71EA417D1003C290E /* Pin.swift */; };
+		115D42CA1EA4191E003C290E /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115D42C91EA4191E003C290E /* User.swift */; };
+		115D42CC1EA41926003C290E /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115D42CB1EA41926003C290E /* Category.swift */; };
+		115D42CF1EA41A80003C290E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115D42CE1EA41A80003C290E /* Constants.swift */; };
 		11DC8E0A1EA410710036F77E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11DC8E091EA410710036F77E /* AppDelegate.swift */; };
 		11DC8E0F1EA410710036F77E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11DC8E0D1EA410710036F77E /* Main.storyboard */; };
 		11DC8E111EA410710036F77E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 11DC8E101EA410710036F77E /* Assets.xcassets */; };
@@ -41,6 +59,12 @@
 /* Begin PBXFileReference section */
 		069B8B725A85768118117031 /* Pods-PinterestPostsExampleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PinterestPostsExampleTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PinterestPostsExampleTests/Pods-PinterestPostsExampleTests.release.xcconfig"; sourceTree = "<group>"; };
 		0DACF4C620BE31341C967692 /* Pods_PinterestPostsExampleUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PinterestPostsExampleUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		114D2D301EA4BBA1005235E3 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		114D2D341EA4C491005235E3 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		115D42C71EA417D1003C290E /* Pin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pin.swift; sourceTree = "<group>"; };
+		115D42C91EA4191E003C290E /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		115D42CB1EA41926003C290E /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		115D42CE1EA41A80003C290E /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		11DC8E061EA410710036F77E /* PinterestPostsExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PinterestPostsExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		11DC8E091EA410710036F77E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = PinterestPostsExample/AppDelegate.swift; sourceTree = "<group>"; };
 		11DC8E0E1EA410710036F77E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -91,6 +115,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		115D42CD1EA41A5E003C290E /* Misc */ = {
+			isa = PBXGroup;
+			children = (
+				115D42CE1EA41A80003C290E /* Constants.swift */,
+				114D2D301EA4BBA1005235E3 /* Extensions.swift */,
+			);
+			path = Misc;
+			sourceTree = "<group>";
+		};
 		11DC8DFD1EA410710036F77E = {
 			isa = PBXGroup;
 			children = (
@@ -121,6 +154,7 @@
 				11DC8E391EA412020036F77E /* Controllers */,
 				11DC8E381EA411FC0036F77E /* Models */,
 				11DC8E3A1EA412080036F77E /* Views */,
+				115D42CD1EA41A5E003C290E /* Misc */,
 				11DC8E3D1EA4124B0036F77E /* SupportingFiles */,
 			);
 			path = PinterestPostsExample;
@@ -155,6 +189,9 @@
 		11DC8E381EA411FC0036F77E /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				115D42C71EA417D1003C290E /* Pin.swift */,
+				115D42C91EA4191E003C290E /* User.swift */,
+				115D42CB1EA41926003C290E /* Category.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -162,6 +199,7 @@
 		11DC8E391EA412020036F77E /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				114D2D341EA4C491005235E3 /* HomeViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -508,8 +546,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				115D42CA1EA4191E003C290E /* User.swift in Sources */,
+				115D42CC1EA41926003C290E /* Category.swift in Sources */,
+				115D42C81EA417D1003C290E /* Pin.swift in Sources */,
+				114D2D351EA4C491005235E3 /* HomeViewController.swift in Sources */,
 				11DC8E0A1EA410710036F77E /* AppDelegate.swift in Sources */,
 				11DC8E3F1EA413E80036F77E /* ApiClient.swift in Sources */,
+				115D42CF1EA41A80003C290E /* Constants.swift in Sources */,
+				114D2D311EA4BBA1005235E3 /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -518,7 +562,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				11DC8E1F1EA410710036F77E /* PinterestPostsExampleTests.swift in Sources */,
+				1103521A1EA42F8A004317DB /* Category.swift in Sources */,
+				1103521C1EA42F8D004317DB /* User.swift in Sources */,
+				114D2D361EA4C491005235E3 /* HomeViewController.swift in Sources */,
 				11DC8E401EA413E80036F77E /* ApiClient.swift in Sources */,
+				110352161EA42F6C004317DB /* Constants.swift in Sources */,
+				110352181EA42F87004317DB /* Pin.swift in Sources */,
+				114D2D321EA4BBA1005235E3 /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -527,7 +577,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				11DC8E2A1EA410710036F77E /* PinterestPostsExampleUITests.swift in Sources */,
+				1103521B1EA42F8B004317DB /* Category.swift in Sources */,
+				1103521D1EA42F8E004317DB /* User.swift in Sources */,
+				114D2D371EA4C491005235E3 /* HomeViewController.swift in Sources */,
 				11DC8E411EA413E80036F77E /* ApiClient.swift in Sources */,
+				110352171EA42F6D004317DB /* Constants.swift in Sources */,
+				110352191EA42F87004317DB /* Pin.swift in Sources */,
+				114D2D331EA4BBA1005235E3 /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
