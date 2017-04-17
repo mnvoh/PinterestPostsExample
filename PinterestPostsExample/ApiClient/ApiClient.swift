@@ -77,12 +77,12 @@ class ApiClient {
     let height = json["height"] as? Int ?? 0
     let color = json["color"] as? String ?? "#ffffff"
     let likes = json["likes"] as? Int ?? 0
-    var fullUrl = ""
-    var thumbUrl = ""
+    var fullUrlString = ""
+    var thumbUrlString = ""
     
     if let urls = json["urls"] as? [AnyHashable: Any] {
-      fullUrl = urls["full"] as? String ?? ""
-      thumbUrl = urls["thumb"] as? String ?? ""
+      fullUrlString = urls["full"] as? String ?? ""
+      thumbUrlString = urls["thumb"] as? String ?? ""
     }
     
     var user: User?
@@ -95,14 +95,23 @@ class ApiClient {
       categories = praseCategories(json: categoriesArray)
     }
     
+    var fullUrl: URL? = nil
+    var thumbUrl: URL? = nil
+    if let furl = fullUrlString.addingPercentEscapes(using: .utf8) {
+      fullUrl = URL(string: furl)
+    }
+    if let turl = thumbUrlString.addingPercentEscapes(using: .utf8) {
+      thumbUrl = URL(string: turl)
+    }
+    
     return Pin(
       id: id,
       createdAt: createdAt,
       size: CGSize(width: width, height: height),
       color: UIColor(hexString: color),
       likes: likes,
-      fullUrl: URL(string: fullUrl),
-      thumbUrl: URL(string: thumbUrl),
+      fullUrl: fullUrl,
+      thumbUrl: thumbUrl,
       user: user,
       categories: categories
     )

@@ -21,6 +21,9 @@
 		114D2D351EA4C491005235E3 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114D2D341EA4C491005235E3 /* HomeViewController.swift */; };
 		114D2D361EA4C491005235E3 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114D2D341EA4C491005235E3 /* HomeViewController.swift */; };
 		114D2D371EA4C491005235E3 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114D2D341EA4C491005235E3 /* HomeViewController.swift */; };
+		114D2D391EA4CE59005235E3 /* PinView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114D2D381EA4CE59005235E3 /* PinView.swift */; };
+		114D2D3A1EA4CE59005235E3 /* PinView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114D2D381EA4CE59005235E3 /* PinView.swift */; };
+		114D2D3B1EA4CE59005235E3 /* PinView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114D2D381EA4CE59005235E3 /* PinView.swift */; };
 		115D42C81EA417D1003C290E /* Pin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115D42C71EA417D1003C290E /* Pin.swift */; };
 		115D42CA1EA4191E003C290E /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115D42C91EA4191E003C290E /* User.swift */; };
 		115D42CC1EA41926003C290E /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115D42CB1EA41926003C290E /* Category.swift */; };
@@ -61,6 +64,7 @@
 		0DACF4C620BE31341C967692 /* Pods_PinterestPostsExampleUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PinterestPostsExampleUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		114D2D301EA4BBA1005235E3 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		114D2D341EA4C491005235E3 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		114D2D381EA4CE59005235E3 /* PinView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PinView.swift; sourceTree = "<group>"; };
 		115D42C71EA417D1003C290E /* Pin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pin.swift; sourceTree = "<group>"; };
 		115D42C91EA4191E003C290E /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		115D42CB1EA41926003C290E /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
@@ -225,6 +229,7 @@
 		11DC8E3C1EA412360036F77E /* CustomViews */ = {
 			isa = PBXGroup;
 			children = (
+				114D2D381EA4CE59005235E3 /* PinView.swift */,
 			);
 			name = CustomViews;
 			path = CutomViews;
@@ -551,6 +556,7 @@
 				115D42C81EA417D1003C290E /* Pin.swift in Sources */,
 				114D2D351EA4C491005235E3 /* HomeViewController.swift in Sources */,
 				11DC8E0A1EA410710036F77E /* AppDelegate.swift in Sources */,
+				114D2D391EA4CE59005235E3 /* PinView.swift in Sources */,
 				11DC8E3F1EA413E80036F77E /* ApiClient.swift in Sources */,
 				115D42CF1EA41A80003C290E /* Constants.swift in Sources */,
 				114D2D311EA4BBA1005235E3 /* Extensions.swift in Sources */,
@@ -566,6 +572,7 @@
 				1103521C1EA42F8D004317DB /* User.swift in Sources */,
 				114D2D361EA4C491005235E3 /* HomeViewController.swift in Sources */,
 				11DC8E401EA413E80036F77E /* ApiClient.swift in Sources */,
+				114D2D3A1EA4CE59005235E3 /* PinView.swift in Sources */,
 				110352161EA42F6C004317DB /* Constants.swift in Sources */,
 				110352181EA42F87004317DB /* Pin.swift in Sources */,
 				114D2D321EA4BBA1005235E3 /* Extensions.swift in Sources */,
@@ -581,6 +588,7 @@
 				1103521D1EA42F8E004317DB /* User.swift in Sources */,
 				114D2D371EA4C491005235E3 /* HomeViewController.swift in Sources */,
 				11DC8E411EA413E80036F77E /* ApiClient.swift in Sources */,
+				114D2D3B1EA4CE59005235E3 /* PinView.swift in Sources */,
 				110352171EA42F6D004317DB /* Constants.swift in Sources */,
 				110352191EA42F87004317DB /* Pin.swift in Sources */,
 				114D2D331EA4BBA1005235E3 /* Extensions.swift in Sources */,
