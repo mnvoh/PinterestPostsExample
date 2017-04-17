@@ -14,11 +14,23 @@ class HomeViewController: UIViewController {
   // MARK: IBOutlets
 
   @IBOutlet weak var collectionView: UICollectionView!
+  @IBOutlet weak var netActivityIndicator: UIActivityIndicatorView!
   
   
   // MARK: Properties
   
+  let cellSpacing: CGFloat = 12
+  var refreshControll: UIRefreshControl!
   var pins = [Pin]()
+  var isLoading: Bool = false {
+    didSet {
+      if isLoading {
+        netActivityIndicator.startAnimating()
+      } else {
+        netActivityIndicator.stopAnimating()
+      }
+    }
+  }
   
   struct Storyboard {
     static let pinsCollectionViewCellId = "pincell"
@@ -30,15 +42,60 @@ class HomeViewController: UIViewController {
     
     super.viewDidLoad()
     
+    setupCollectionView()
+    
+    loadData()
+    
+  }
+  
+  // MARK: Private Functions
+  
+  private func setupCollectionView() {
+    
     if let layout = collectionView?.collectionViewLayout as? PinterestLayout {
       layout.delegate = self
     }
+    let layout = collectionView.collectionViewLayout as! PinterestLayout
+    let padding = layout.cellPadding
+    collectionView.contentInset = UIEdgeInsets(top: padding, left: padding, bottom: padding, right: padding)
+    collectionView.alwaysBounceVertical = true
     
-    ApiClient.getPins(offset: 0) { (pins, error) in
+    refreshControll = UIRefreshControl()
+    refreshControll.addTarget(self, action: #selector(reloadData), for: .valueChanged)
+    
+    collectionView.addSubview(refreshControll)
+    
+  }
+  
+  @objc private func reloadData() {
+    
+    loadData(forceReload: true)
+    
+  }
+  
+  fileprivate func loadData(forceReload: Bool = false) {
+    
+    var offset = pins.count
+    if forceReload {
+      offset = 0
+    }
+    
+    if pins.count <= 0 {
+      isLoading = true
+    }
+    
+    ApiClient.getPins(offset: offset) { (pins, error) in
+      
+      self.refreshControll.endRefreshing()
+      self.isLoading = false
       
       guard let pins = pins else {
-        print(error)
+        print("\(error ?? "An unknown error has occured")")
         return
+      }
+      
+      if forceReload {
+        self.pins.removeAll()
       }
       
       self.pins = pins
@@ -48,6 +105,7 @@ class HomeViewController: UIViewController {
     }
     
   }
+
   
 }
 

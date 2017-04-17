@@ -49,7 +49,7 @@ class PinterestLayout: UICollectionViewLayout {
   
   /// Configurable properties
   var numberOfColumns = 2
-  var cellPadding: CGFloat = 6.0
+  var cellPadding: CGFloat = 8.0
   
   /// Array to keep a cache of attributes.
   private var cache = [PinterestLayoutAttributes]()
