@@ -40,7 +40,12 @@ class ApiClient {
           
           // since our endpoint doesn't actually take care of offseting and limiting
           // we have to slice the array of the results
-          let currentPage = json[offset ..< offset + count]
+          let endOffset = json.count > offset + count ? offset + count : json.count
+          if endOffset <= offset {
+            completionHandler([Pin](), nil)
+            return
+          }
+          let currentPage = json[offset ..< endOffset]
           
           var pins = [Pin]()
           

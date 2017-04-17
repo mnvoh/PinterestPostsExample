@@ -22,6 +22,7 @@ class HomeViewController: UIViewController {
   let cellSpacing: CGFloat = 12
   var refreshControll: UIRefreshControl!
   var pins = [Pin]()
+  var lastLoadTime: TimeInterval = 0
   var isLoading: Bool = false {
     didSet {
       if isLoading {
@@ -75,14 +76,16 @@ class HomeViewController: UIViewController {
   
   fileprivate func loadData(forceReload: Bool = false) {
     
+    if isLoading {
+      return
+    }
+    
     var offset = pins.count
     if forceReload {
       offset = 0
     }
     
-    if pins.count <= 0 {
-      isLoading = true
-    }
+    isLoading = true
     
     ApiClient.getPins(offset: offset) { (pins, error) in
       
@@ -98,9 +101,10 @@ class HomeViewController: UIViewController {
         self.pins.removeAll()
       }
       
-      self.pins = pins
+      self.pins.append(contentsOf: pins)
       
       self.collectionView.reloadData()
+      
       
     }
     
@@ -143,6 +147,24 @@ extension HomeViewController: UICollectionViewDelegate {
   
   
 }
+
+
+// MARK: UIScrollView Delegate
+extension HomeViewController: UIScrollViewDelegate {
+  
+  func scrollViewDidScroll(_ scrollView: UIScrollView) {
+    
+    let bottomEdge = scrollView.contentOffset.y + scrollView.frame.size.height
+    
+    if (bottomEdge >= scrollView.contentSize.height)
+    {
+      loadData()
+    }
+    
+  }
+  
+}
+
 
 
 // MARK: PinterestLayoutDelegate
