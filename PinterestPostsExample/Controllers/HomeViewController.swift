@@ -8,6 +8,7 @@
 
 import UIKit
 import CachedRequester
+import ImageViewer
 
 class HomeViewController: UIViewController {
   
@@ -109,6 +110,54 @@ class HomeViewController: UIViewController {
     }
     
   }
+  
+  
+  
+  fileprivate func imageViewerConfig() -> GalleryConfiguration {
+    
+    return [
+      
+      GalleryConfigurationItem.closeButtonMode(.builtIn),
+      GalleryConfigurationItem.thumbnailsButtonMode(.none),
+      
+      GalleryConfigurationItem.pagingMode(.standard),
+      GalleryConfigurationItem.presentationStyle(.displacement),
+      GalleryConfigurationItem.hideDecorationViewsOnLaunch(false),
+      
+      GalleryConfigurationItem.overlayColor(UIColor(white: 0.035, alpha: 1)),
+      GalleryConfigurationItem.overlayColorOpacity(1),
+      GalleryConfigurationItem.overlayBlurOpacity(1),
+      GalleryConfigurationItem.overlayBlurStyle(UIBlurEffectStyle.light),
+      
+      GalleryConfigurationItem.swipeToDismissThresholdVelocity(500),
+      
+      GalleryConfigurationItem.doubleTapToZoomDuration(0.15),
+      
+      GalleryConfigurationItem.blurPresentDuration(0.25),
+      GalleryConfigurationItem.blurPresentDelay(0),
+      GalleryConfigurationItem.colorPresentDuration(0.25),
+      GalleryConfigurationItem.colorPresentDelay(0),
+      
+      GalleryConfigurationItem.blurDismissDuration(0.1),
+      GalleryConfigurationItem.blurDismissDelay(0.4),
+      GalleryConfigurationItem.colorDismissDuration(0),
+      GalleryConfigurationItem.colorDismissDelay(0),
+      
+      GalleryConfigurationItem.itemFadeDuration(0.3),
+      GalleryConfigurationItem.decorationViewsFadeDuration(0.15),
+      GalleryConfigurationItem.rotationDuration(0.15),
+      
+      GalleryConfigurationItem.displacementDuration(0.55),
+      GalleryConfigurationItem.reverseDisplacementDuration(0.55),
+      GalleryConfigurationItem.displacementTransitionStyle(.springBounce(0.25)),
+      GalleryConfigurationItem.displacementTimingCurve(.easeInOut),
+      
+      GalleryConfigurationItem.statusBarHidden(true),
+      GalleryConfigurationItem.displacementKeepOriginalInPlace(false),
+      GalleryConfigurationItem.displacementInsetMargin(50)
+    ]
+    
+  }
 
   
 }
@@ -144,7 +193,15 @@ extension HomeViewController: UICollectionViewDataSource {
 
 extension HomeViewController: UICollectionViewDelegate {
   
-  
+  func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+    let gallery = GalleryViewController(
+      startIndex: indexPath.item,
+      itemsDatasource: self,
+      displacedViewsDatasource: self,
+      configuration: imageViewerConfig()
+    )
+    presentImageGallery(gallery)
+  }
   
 }
 
@@ -177,6 +234,39 @@ extension HomeViewController: PinterestLayoutDelegate {
     let aspectRatio = pin.size.width / pin.size.height
     
     return withWidth / aspectRatio
+  }
+  
+}
+
+
+// MARK: GalleryItemsDatasource
+
+extension HomeViewController: GalleryItemsDatasource {
+  
+  func itemCount() -> Int {
+    return pins.count
+  }
+  
+  func provideGalleryItem(_ index: Int) -> GalleryItem {
+    guard let cell = collectionView.cellForItem(at: IndexPath(item: index, section: 0)) as? PinCollectionViewCell else {
+      return GalleryItem.image { $0(#imageLiteral(resourceName: "placeholder")) }
+    }
+    let item = GalleryItem.image { $0(cell.pinView.pinImage.image) }
+    return item
+  }
+  
+}
+
+
+// MARK: GalleryDisplacedViewsDatasource
+
+extension HomeViewController: GalleryDisplacedViewsDatasource {
+  
+  func provideDisplacementItem(atIndex index: Int) -> DisplaceableView? {
+    guard let cell = collectionView.cellForItem(at: IndexPath(item: index, section: 0)) as? PinCollectionViewCell else {
+      return nil
+    }
+    return DisplaceableImage(cell.pinView.pinImage)
   }
   
 }

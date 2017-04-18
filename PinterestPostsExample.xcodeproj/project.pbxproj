@@ -21,6 +21,9 @@
 		112A4B401EA52B77003D1EFF /* PinCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112A4B3F1EA52B77003D1EFF /* PinCollectionViewCell.swift */; };
 		112A4B411EA52B77003D1EFF /* PinCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112A4B3F1EA52B77003D1EFF /* PinCollectionViewCell.swift */; };
 		112A4B421EA52B77003D1EFF /* PinCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112A4B3F1EA52B77003D1EFF /* PinCollectionViewCell.swift */; };
+		112A4B621EA60632003D1EFF /* DisplaceableImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112A4B611EA60632003D1EFF /* DisplaceableImage.swift */; };
+		112A4B631EA60632003D1EFF /* DisplaceableImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112A4B611EA60632003D1EFF /* DisplaceableImage.swift */; };
+		112A4B641EA60632003D1EFF /* DisplaceableImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112A4B611EA60632003D1EFF /* DisplaceableImage.swift */; };
 		114D2D311EA4BBA1005235E3 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114D2D301EA4BBA1005235E3 /* Extensions.swift */; };
 		114D2D321EA4BBA1005235E3 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114D2D301EA4BBA1005235E3 /* Extensions.swift */; };
 		114D2D331EA4BBA1005235E3 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114D2D301EA4BBA1005235E3 /* Extensions.swift */; };
@@ -70,6 +73,7 @@
 		0DACF4C620BE31341C967692 /* Pods_PinterestPostsExampleUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PinterestPostsExampleUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		112A4B3B1EA52498003D1EFF /* PinterestLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PinterestLayout.swift; sourceTree = "<group>"; };
 		112A4B3F1EA52B77003D1EFF /* PinCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PinCollectionViewCell.swift; sourceTree = "<group>"; };
+		112A4B611EA60632003D1EFF /* DisplaceableImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisplaceableImage.swift; sourceTree = "<group>"; };
 		114D2D301EA4BBA1005235E3 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		114D2D341EA4C491005235E3 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		114D2D381EA4CE59005235E3 /* PinView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PinView.swift; sourceTree = "<group>"; };
@@ -240,6 +244,7 @@
 				114D2D381EA4CE59005235E3 /* PinView.swift */,
 				112A4B3B1EA52498003D1EFF /* PinterestLayout.swift */,
 				112A4B3F1EA52B77003D1EFF /* PinCollectionViewCell.swift */,
+				112A4B611EA60632003D1EFF /* DisplaceableImage.swift */,
 			);
 			name = CustomViews;
 			path = CutomViews;
@@ -571,6 +576,7 @@
 				114D2D391EA4CE59005235E3 /* PinView.swift in Sources */,
 				11DC8E3F1EA413E80036F77E /* ApiClient.swift in Sources */,
 				115D42CF1EA41A80003C290E /* Constants.swift in Sources */,
+				112A4B621EA60632003D1EFF /* DisplaceableImage.swift in Sources */,
 				114D2D311EA4BBA1005235E3 /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -589,6 +595,7 @@
 				114D2D3A1EA4CE59005235E3 /* PinView.swift in Sources */,
 				110352161EA42F6C004317DB /* Constants.swift in Sources */,
 				110352181EA42F87004317DB /* Pin.swift in Sources */,
+				112A4B631EA60632003D1EFF /* DisplaceableImage.swift in Sources */,
 				114D2D321EA4BBA1005235E3 /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -607,6 +614,7 @@
 				114D2D3B1EA4CE59005235E3 /* PinView.swift in Sources */,
 				110352171EA42F6D004317DB /* Constants.swift in Sources */,
 				110352191EA42F87004317DB /* Pin.swift in Sources */,
+				112A4B641EA60632003D1EFF /* DisplaceableImage.swift in Sources */,
 				114D2D331EA4BBA1005235E3 /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
