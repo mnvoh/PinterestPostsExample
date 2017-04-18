@@ -20,10 +20,8 @@ class HomeViewController: UIViewController {
   
   // MARK: Properties
   
-  let cellSpacing: CGFloat = 12
   var refreshControll: PullToRefreshControl!
   var pins = [Pin]()
-  var lastLoadTime: TimeInterval = 0
   var isLoading: Bool = false {
     didSet {
       if isLoading {
@@ -95,9 +93,10 @@ class HomeViewController: UIViewController {
         
         DispatchQueue.main.async {
           self.refreshControll.endRefreshing()
-          self.isLoading = false
         }
-      }      
+      }
+      
+      self.isLoading = false
       
       guard let pins = pins else {
         print("\(error ?? "An unknown error has occured")")
