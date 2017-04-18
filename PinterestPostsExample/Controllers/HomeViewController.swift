@@ -21,7 +21,7 @@ class HomeViewController: UIViewController {
   // MARK: Properties
   
   let cellSpacing: CGFloat = 12
-  var refreshControll: UIRefreshControl!
+  var refreshControll: PullToRefreshControl!
   var pins = [Pin]()
   var lastLoadTime: TimeInterval = 0
   var isLoading: Bool = false {
@@ -57,12 +57,11 @@ class HomeViewController: UIViewController {
     if let layout = collectionView?.collectionViewLayout as? PinterestLayout {
       layout.delegate = self
     }
-    let layout = collectionView.collectionViewLayout as! PinterestLayout
-    let padding = layout.cellPadding
-    collectionView.contentInset = UIEdgeInsets(top: padding, left: padding, bottom: padding, right: padding)
+    
+    collectionView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
     collectionView.alwaysBounceVertical = true
     
-    refreshControll = UIRefreshControl()
+    refreshControll = PullToRefreshControl(frame: CGRect(x: 0, y: 0, width: collectionView.frame.width, height: 200))
     refreshControll.addTarget(self, action: #selector(reloadData), for: .valueChanged)
     
     collectionView.addSubview(refreshControll)
@@ -90,8 +89,15 @@ class HomeViewController: UIViewController {
     
     ApiClient.getPins(offset: offset) { (pins, error) in
       
-      self.refreshControll.endRefreshing()
-      self.isLoading = false
+      // the following code block is just to show off the refresh control
+      DispatchQueue.global(qos: .userInitiated).async {
+        sleep(2)
+        
+        DispatchQueue.main.async {
+          self.refreshControll.endRefreshing()
+          self.isLoading = false
+        }
+      }      
       
       guard let pins = pins else {
         print("\(error ?? "An unknown error has occured")")
@@ -105,7 +111,6 @@ class HomeViewController: UIViewController {
       self.pins.append(contentsOf: pins)
       
       self.collectionView.reloadData()
-      
       
     }
     
@@ -210,6 +215,8 @@ extension HomeViewController: UICollectionViewDelegate {
 extension HomeViewController: UIScrollViewDelegate {
   
   func scrollViewDidScroll(_ scrollView: UIScrollView) {
+    
+    refreshControll.scrollViewDidScroll(scrollView)
     
     let bottomEdge = scrollView.contentOffset.y + scrollView.frame.size.height
     

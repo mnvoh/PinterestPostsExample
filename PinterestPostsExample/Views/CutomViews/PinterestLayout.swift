@@ -74,10 +74,10 @@ class PinterestLayout: UICollectionViewLayout {
     if cache.isEmpty {
       
       // Pre-Calculates the X Offset for every column and adds an array to increment the currently max Y Offset for each column
-      let columnWidth = contentWidth / CGFloat(numberOfColumns)
+      let columnWidth = (contentWidth - cellPadding * 2) / CGFloat(numberOfColumns)
       var xOffset = [CGFloat]()
       for column in 0 ..< numberOfColumns {
-        xOffset.append(CGFloat(column) * columnWidth )
+        xOffset.append(CGFloat(column) * columnWidth + cellPadding)
       }
       var column = 0
       var yOffset = [CGFloat](repeating: 0, count: numberOfColumns)

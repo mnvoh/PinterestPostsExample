@@ -24,6 +24,9 @@
 		112A4B621EA60632003D1EFF /* DisplaceableImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112A4B611EA60632003D1EFF /* DisplaceableImage.swift */; };
 		112A4B631EA60632003D1EFF /* DisplaceableImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112A4B611EA60632003D1EFF /* DisplaceableImage.swift */; };
 		112A4B641EA60632003D1EFF /* DisplaceableImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112A4B611EA60632003D1EFF /* DisplaceableImage.swift */; };
+		112A4B661EA61EE9003D1EFF /* PullToRefreshControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112A4B651EA61EE9003D1EFF /* PullToRefreshControl.swift */; };
+		112A4B671EA61EE9003D1EFF /* PullToRefreshControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112A4B651EA61EE9003D1EFF /* PullToRefreshControl.swift */; };
+		112A4B681EA61EE9003D1EFF /* PullToRefreshControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112A4B651EA61EE9003D1EFF /* PullToRefreshControl.swift */; };
 		114D2D311EA4BBA1005235E3 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114D2D301EA4BBA1005235E3 /* Extensions.swift */; };
 		114D2D321EA4BBA1005235E3 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114D2D301EA4BBA1005235E3 /* Extensions.swift */; };
 		114D2D331EA4BBA1005235E3 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114D2D301EA4BBA1005235E3 /* Extensions.swift */; };
@@ -74,6 +77,7 @@
 		112A4B3B1EA52498003D1EFF /* PinterestLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PinterestLayout.swift; sourceTree = "<group>"; };
 		112A4B3F1EA52B77003D1EFF /* PinCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PinCollectionViewCell.swift; sourceTree = "<group>"; };
 		112A4B611EA60632003D1EFF /* DisplaceableImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisplaceableImage.swift; sourceTree = "<group>"; };
+		112A4B651EA61EE9003D1EFF /* PullToRefreshControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PullToRefreshControl.swift; sourceTree = "<group>"; };
 		114D2D301EA4BBA1005235E3 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		114D2D341EA4C491005235E3 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		114D2D381EA4CE59005235E3 /* PinView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PinView.swift; sourceTree = "<group>"; };
@@ -245,6 +249,7 @@
 				112A4B3B1EA52498003D1EFF /* PinterestLayout.swift */,
 				112A4B3F1EA52B77003D1EFF /* PinCollectionViewCell.swift */,
 				112A4B611EA60632003D1EFF /* DisplaceableImage.swift */,
+				112A4B651EA61EE9003D1EFF /* PullToRefreshControl.swift */,
 			);
 			name = CustomViews;
 			path = CutomViews;
@@ -569,6 +574,7 @@
 				112A4B3C1EA52498003D1EFF /* PinterestLayout.swift in Sources */,
 				115D42CA1EA4191E003C290E /* User.swift in Sources */,
 				115D42CC1EA41926003C290E /* Category.swift in Sources */,
+				112A4B661EA61EE9003D1EFF /* PullToRefreshControl.swift in Sources */,
 				115D42C81EA417D1003C290E /* Pin.swift in Sources */,
 				114D2D351EA4C491005235E3 /* HomeViewController.swift in Sources */,
 				112A4B401EA52B77003D1EFF /* PinCollectionViewCell.swift in Sources */,
@@ -588,6 +594,7 @@
 				112A4B3D1EA52498003D1EFF /* PinterestLayout.swift in Sources */,
 				11DC8E1F1EA410710036F77E /* PinterestPostsExampleTests.swift in Sources */,
 				1103521A1EA42F8A004317DB /* Category.swift in Sources */,
+				112A4B671EA61EE9003D1EFF /* PullToRefreshControl.swift in Sources */,
 				1103521C1EA42F8D004317DB /* User.swift in Sources */,
 				114D2D361EA4C491005235E3 /* HomeViewController.swift in Sources */,
 				112A4B411EA52B77003D1EFF /* PinCollectionViewCell.swift in Sources */,
@@ -607,6 +614,7 @@
 				112A4B3E1EA52498003D1EFF /* PinterestLayout.swift in Sources */,
 				11DC8E2A1EA410710036F77E /* PinterestPostsExampleUITests.swift in Sources */,
 				1103521B1EA42F8B004317DB /* Category.swift in Sources */,
+				112A4B681EA61EE9003D1EFF /* PullToRefreshControl.swift in Sources */,
 				1103521D1EA42F8E004317DB /* User.swift in Sources */,
 				114D2D371EA4C491005235E3 /* HomeViewController.swift in Sources */,
 				112A4B421EA52B77003D1EFF /* PinCollectionViewCell.swift in Sources */,
