@@ -7,6 +7,7 @@ target 'PinterestPostsExample' do
 
   # Pods for PinterestPostsExample
   pod 'CachedRequester'
+  pod 'ImageViewer'
 
   target 'PinterestPostsExampleTests' do
     inherit! :search_paths
